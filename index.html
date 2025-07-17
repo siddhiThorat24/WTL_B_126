@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website 1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-logo">
+            <div class="logo">
+                <i class="fa-brands fa-shopify"></i>
+            </div>
+        </div>
+
+        <div class="search-bar">
+            <div class="search">
+                <input type="text" placeholder="Search Product" class="search-input">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="login-border">
+            <p class="login">
+                <a href="./login.html">Login</a>
+            </p>
+        </div>
+
+        <div class="orders-border">
+            <p class="orders">Returns & Orders</p>
+        </div>
+
+        <div class="cart-border">
+            <div class="cart-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Cart
+            </div>
+        </div>
+    </div>
+
+    <div class="sub">
+        <div class="options">
+            <a href="#top-offers">Top Offers</a>
+            <a href="./electronics.html">Electronics</a>
+            <a href="./fashion.html">Fashion</a>
+            <a href="./beauty.html">Beauty</a>
+            <a href="./furniture.html">Furniture</a>
+        </div>
+        <div class="deals">
+            <p>Shop on deals</p>
+        </div>
+        <div class="toggle-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+
+    <div class="dropdown-menu open">
+        <div class="drop">
+            <li><a href="#top-offers">Top Offers</a></li>
+            <li><a href="./electronics.html">Electronics</a></li>
+            <li><a href="./fashion.html">Fashion</a></li>
+            <li><a href="./beauty.html">Beauty</a></li>
+            <li><a href="./furniture.html">Furniture</a></li>
+        </div>
+    </div>
+
+    <div class="main-page">
+        
+    </div>
+
+    <section id="top-offers">
+        <div class="box">
+            <div class="box-content">
+                <h2>Watch</h2>
+                <img src="./watch.jpg" alt="Watch" class="box-img">
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Cloth</h2>
+                <img src="./cloth.jpg" alt="cloth" class="box-img">
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Lipstick</h2>
+                <img src="./lipstick.jpg" alt="lipstick" class="box-img">
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Wallet</h2>
+                <img src="./wallet.jpg" alt="wallet" class="box-img">
+                <p>See more</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle-btn')
+        const toggleBtnIcon = document.querySelector('.toggle-btn i')
+        const dropDownMenu = document.querySelector('.dropdown-menu')
+
+        toggleBtn.onclick = function(){
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+</html>
